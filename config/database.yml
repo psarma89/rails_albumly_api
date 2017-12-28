@@ -23,13 +23,13 @@ default: &default
 
 development:
   <<: *default
-  database: rails_alternate_fuel_api_development
+  database: rails_albumly_api_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
   # the same name as the operating system user that initialized the database.
-  #username: rails_alternate_fuel_api
+  #username: rails_albumly_api
 
   # The password associated with the postgres role (username).
   #password:
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: rails_alternate_fuel_api_test
+  database: rails_albumly_api_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: rails_alternate_fuel_api_production
-  username: rails_alternate_fuel_api
-  password: <%= ENV['RAILS_ALTERNATE_FUEL_API_DATABASE_PASSWORD'] %>
+  database: rails_albumly_api_production
+  username: rails_albumly_api
+  password: <%= ENV['RAILS_ALBUMLY_API_DATABASE_PASSWORD'] %>
