@@ -25,7 +25,8 @@ class TwilioController < ApplicationController
       event_number = create_number(temp_number)
 
       event = Event.create(title: params["title"], user_id: params["userId"], twilio_number: event_number.phone_number)
-      render json: event
+      user = User.find(params["userId"])
+      render json: user
     rescue Twilio::REST::TwilioError => e
       puts e.message
     end
