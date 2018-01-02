@@ -4,6 +4,11 @@ class Api::V1::EventsController < ApplicationController
   #   render json: @events
   # end
 
+  def show
+    @event = Event.find(params[:id])
+    render json: @event
+  end
+
   def destroy
     @event = Event.find(params[:id])
     if @event

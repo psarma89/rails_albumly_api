@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :users, only: [:index, :create, :show]
-      resources :events, only: [:destroy]
+      resources :events, only: [:show, :destroy]
       # post 'users/reply' => 'users#reply'
     end
   end
